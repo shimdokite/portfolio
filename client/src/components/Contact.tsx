@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { CONTACT_ICONS, CONTACT_INFO } from '@/constants/content';
+import { CONTACT_ICONS, CONTACT_INFO } from '@/constants/contact';
 
 interface ContactProps {
   type: 'phone' | 'github' | 'mail' | 'tistory';
