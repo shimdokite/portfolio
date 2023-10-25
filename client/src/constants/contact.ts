@@ -8,10 +8,11 @@ export const CONTACT_ICONS = {
 export const CONTACT_LINK = {
   github: 'https://github.com/shimdokite',
   tistory: 'https://dokite-99.tistory.com',
+  mail: 'mailto:shimdokite@gmail.com',
 } as const;
 
 export const CONTACT_INFO = {
-  phone: process.env.PHONE_NUMBER,
+  phone: process.env.NEXT_PUBLIC_NUMBER,
   mail: 'shimdokite@gmail.com',
   github: '',
   tistory: '',
