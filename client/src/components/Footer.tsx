@@ -9,9 +9,16 @@ export default function Footer() {
     <footer>
       <div className="flex flex-col justify-center items-center py-10">
         <div className="flex gap-[14px] mb-2">
-          <Contact type="phone" />
+          <div>
+            <Contact type="phone" />
+          </div>
 
-          <Contact type="mail" />
+          <Link
+            href={CONTACT_LINK.mail}
+            target="_blank"
+            rel="noreferrer noopener">
+            <Contact type="mail" />
+          </Link>
 
           <Link
             href={CONTACT_LINK.github}
@@ -19,7 +26,6 @@ export default function Footer() {
             rel="noreferrer noopener">
             <Contact type="github" />
           </Link>
-
           <Link
             href={CONTACT_LINK.tistory}
             target="_blank"
@@ -28,7 +34,9 @@ export default function Footer() {
           </Link>
         </div>
 
-        <p className="text-blue-90 text-xs">© Developed by Shimdoyeon</p>
+        <p className="text-blue-90 text-xs font-normal">
+          © Developed by Shimdoyeon
+        </p>
       </div>
     </footer>
   );
