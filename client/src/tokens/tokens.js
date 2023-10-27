@@ -20,8 +20,11 @@ const tokens = {
       },
   },
   boxShadow: {
-    "down": "0px 4px 4px 0px rgba(0,0,0,0.25)"
-  }
+    "down": "0px 4px 4px 0px rgba(0,0,0,0.25)",
+  },
+  dropShadow: {
+    "imageShadow": '-2mm 4mm 0mm #FAEDED',
+  },
 }
 
 export default tokens;

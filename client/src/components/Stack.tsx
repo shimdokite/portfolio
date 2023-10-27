@@ -2,10 +2,10 @@ import StackIcon from './StackIcon';
 
 export default function Stack() {
   return (
-    <div className="h-[658px] bg-blue-10">
-      <h1 className="relative top-28 left-36 text-2xl">Stack</h1>
+    <div className="h-[582px] bg-blue-10">
+      <h1 className="relative top-10 left-36 text-2xl">Stack</h1>
 
-      <div className="mt-36 flex justify-center items-center">
+      <div className="mt-14 flex justify-center items-center">
         <div className="bg-white-10 px-8 py-3 flex justify-center gap-44">
           <div>
             <h2 className="mb-2 text-lg">Language</h2>
