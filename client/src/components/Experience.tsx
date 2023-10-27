@@ -2,10 +2,10 @@ import { EXPERIENCES } from '@/constants/experience';
 
 export default function Experience() {
   return (
-    <div className="h-[658px] bg-pink-10">
-      <h1 className="relative top-28 left-36 text-2xl">Experience</h1>
+    <div className="h-[582px] bg-pink-10">
+      <h1 className="relative top-10 left-36 text-2xl">Experience</h1>
 
-      <div className="mt-20 flex flex-col justify-center items-center">
+      <div className="mt-14 flex flex-col justify-center items-center">
         {EXPERIENCES.map((experience) => (
           <div className="mt-20 w-[600px] flex gap-16" key={experience.title}>
             <div className="w-[200px]">
