@@ -2,7 +2,7 @@ import type { Config } from 'tailwindcss';
 
 import tokens from './src/tokens/tokens';
 
-const { colors, boxShadow } = tokens;
+const { colors, boxShadow, dropShadow } = tokens;
 
 const config: Config = {
   content: [
@@ -12,8 +12,11 @@ const config: Config = {
   ],
   theme: {
     colors,
-    extend: { boxShadow },
+    extend: {
+      boxShadow,
+      dropShadow,
+    },
+    plugins: [],
   },
-  plugins: [],
 };
 export default config;
