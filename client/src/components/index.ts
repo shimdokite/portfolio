@@ -5,6 +5,7 @@ import Experience from './Experience';
 import Footer from './Footer';
 import Header from './Header';
 import Intro from './Intro';
+import ProjectTemplate from './ProjectTemplate';
 import Stack from './Stack';
 import StackIcon from './StackIcon';
 
@@ -16,6 +17,7 @@ export {
   Footer,
   Header,
   Intro,
+  ProjectTemplate,
   Stack,
   StackIcon,
 };
