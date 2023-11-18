@@ -1,13 +1,27 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Button } from '.';
+import { createPortal } from 'react-dom';
+
+import useModal from '@/hooks/useModal';
+
+import { Button, ReadMoreModal } from '.';
 
 import { PROJECTS } from '@/constants/project';
 
 export default function ProjectTemplate() {
+  const { type, setType, isOpen, setIsOpen, portalElement, open } = useModal();
+
+  const onReadMoreType = (title: string) => {
+    if (title === 'Stack Overflow') return setType('pre');
+
+    if (title === 'Grow Story') return setType('main');
+  };
+
   return (
-    <div className="flex flex-col items-center justify-center gap-10">
+    <div className="flex flex-col items-center justify-center gap-11">
       {PROJECTS.map((project) => (
         <div
           key={project.title}
@@ -44,12 +58,27 @@ export default function ProjectTemplate() {
 
               <div>
                 <p className="w-[480px] mb-2 break-words">{project.summary}</p>
-                <Button>자세히 보기</Button>
+                <Button
+                  onClick={() => {
+                    open(), onReadMoreType(project.title);
+                  }}>
+                  자세히 보기
+                </Button>
               </div>
             </section>
           </div>
 
-          <div className="flex items-center justify-center mt-10 border-black-10 border-[0.5px] w-[65%]"></div>
+          {isOpen && portalElement
+            ? createPortal(
+                <ReadMoreModal
+                  setIsOpen={setIsOpen}
+                  type={type as 'pre' | 'main'}
+                />,
+                portalElement,
+              )
+            : null}
+
+          <div className="flex items-center justify-center mt-10 border-black-10 border-[0.5px] w-full"></div>
         </div>
       ))}
     </div>
