@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const useModal = () => {
+  const [type, setType] = useState('pre');
   const [isOpen, setIsOpen] = useState(false);
   const [portalElement, setPortalElement] = useState<Element | null>(null);
 
@@ -12,7 +13,7 @@ const useModal = () => {
     setIsOpen(true);
   };
 
-  return { isOpen, setIsOpen, open, portalElement };
+  return { type, setType, isOpen, setIsOpen, open, portalElement };
 };
 
 export default useModal;

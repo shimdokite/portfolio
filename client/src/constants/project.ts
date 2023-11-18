@@ -26,6 +26,7 @@ export const READ_MORE = {
     summary: '프리 프로젝트 소개',
     solution: '문제 해결 경험',
   },
+
   main: {
     summary: '메인 프로젝트 소개',
     solution: '문제 해결 경험',
