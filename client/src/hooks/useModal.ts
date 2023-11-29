@@ -13,7 +13,11 @@ const useModal = () => {
     setIsOpen(true);
   };
 
-  return { type, setType, isOpen, setIsOpen, open, portalElement };
+  const close = () => {
+    setIsOpen(false);
+  };
+
+  return { type, setType, isOpen, setIsOpen, open, close, portalElement };
 };
 
 export default useModal;
