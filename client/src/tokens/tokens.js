@@ -19,12 +19,18 @@ const tokens = {
         20: "f8f8f8"
       },
   },
+
   boxShadow: {
     "down": "0px 4px 4px 0px rgba(0,0,0,0.25)",
   },
+
   dropShadow: {
-    "imageShadow": '-2mm 4mm 0mm #FAEDED',
+    "imageShadow": "-2mm 4mm 0mm #FAEDED",
   },
+
+  letterSpacing: {
+    "tight": "-0.01em"
+  }
 }
 
 export default tokens;
