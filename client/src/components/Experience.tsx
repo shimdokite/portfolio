@@ -19,8 +19,8 @@ export default function Experience() {
               </section>
             </div>
 
-            <section className="">
-              <h2 className="">{experience.subTitle}</h2>
+            <section>
+              <h2>{experience.subTitle}</h2>
 
               <ul className="w-fit flex flex-col justify-start font-normal text-sm list-disc">
                 {experience.features.map((feature) => (

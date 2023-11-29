@@ -2,7 +2,7 @@ import type { Config } from 'tailwindcss';
 
 import tokens from './src/tokens/tokens';
 
-const { colors, boxShadow, dropShadow } = tokens;
+const { colors, boxShadow, dropShadow, letterSpacing } = tokens;
 
 const config: Config = {
   content: [
@@ -15,6 +15,7 @@ const config: Config = {
     extend: {
       boxShadow,
       dropShadow,
+      letterSpacing,
     },
     plugins: [],
   },

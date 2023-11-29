@@ -12,11 +12,11 @@ import { Button, ReadMoreModal } from '.';
 import { PROJECTS } from '@/constants/project';
 
 export default function ProjectTemplate() {
-  const { type, setType, isOpen, setIsOpen, portalElement, open } = useModal();
+  const { type, setType, isOpen, setIsOpen, portalElement, open, close } =
+    useModal();
 
   const onReadMoreType = (title: string) => {
     if (title === 'Stack Overflow') return setType('pre');
-
     if (title === 'Grow Story') return setType('main');
   };
 
@@ -30,13 +30,13 @@ export default function ProjectTemplate() {
             <Image
               src={project.thumbnail}
               alt="project thumbnail"
-              width={245}
+              width={200}
               height={180}
             />
 
             <section className="w-full flex flex-col justify-center">
               <div className="flex items-center gap-4 mb-2">
-                <h2 className="font-bold text-[24px]">{project.title}</h2>
+                <h2 className="font-bold text-xl">{project.title}</h2>
                 <div>
                   {'('}
                   <Link href={project.site} className="text-black-10">
@@ -73,6 +73,7 @@ export default function ProjectTemplate() {
                 <ReadMoreModal
                   setIsOpen={setIsOpen}
                   type={type as 'pre' | 'main'}
+                  close={close}
                 />,
                 portalElement,
               )
