@@ -19,7 +19,7 @@ export default function Intro() {
           {INTRO_TEXT.title}
         </h1>
 
-        <h2 className="max-[660px]:text-[13px] max-[550px]:text-[12px] font-normal whitespace-pre-line mb-3 mr-[10px]">
+        <h2 className="max-[660px]:text-[13px] max-[550px]:text-[12px] font-normal whitespace-pre-line mb-5 mr-[10px]">
           &nbsp;{INTRO_TEXT.description}
         </h2>
 
