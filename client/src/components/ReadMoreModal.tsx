@@ -60,21 +60,21 @@ export default function ReadMoreModal({
               <li className="mb-2" key={solve.title}>
                 <p className="font-bold mb-1">{solve.title}</p>
 
+                {solve.image !== undefined && (
+                  <div className="flex justify-center items-center">
+                    <Image
+                      src={solve.image}
+                      alt="문제 원인 사진"
+                      width={700}
+                      height={200}
+                      className="mb-3 rounded-md border-pink-70 border-2"
+                    />
+                  </div>
+                )}
+
                 <ul className="list-disc">
                   {solve.content.map((content, index) => (
                     <div key={index} className="w-full">
-                      {solve.image !== undefined && (
-                        <div className="flex justify-center items-center">
-                          <Image
-                            src={solve.image}
-                            alt="문제 원인 사진"
-                            width={700}
-                            height={200}
-                            className="mb-3 rounded-md"
-                          />
-                        </div>
-                      )}
-
                       <li
                         className="text-sm pb-[6px] ml-5 break-keep"
                         key={index}>
