@@ -16,8 +16,11 @@ const tokens = {
     },
     white: {
         10: "#fefefe", 
-        20: "f8f8f8"
-      },
+        20: "#f8f8f8"
+    },
+    yellow: {
+      10: "#FFEEC1"
+    }
   },
 
   boxShadow: {
