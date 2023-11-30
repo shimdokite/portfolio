@@ -2,7 +2,8 @@ export const INTRO_TEXT = {
   title: `안녕하세요 
   프론트엔드 개발자 
   심도연 입니다.`,
-  description: `Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
-    Velit officia consequat duis enim velit mollit. 
-    Exercitation veniam consequat sunt nostrud amet.`,
+
+  description: ` 한 줄의 코드가 어떤 성질과 목적을 가지고 있는지 고민하고,
+  사용하는 기술의 원리를 탐구하는 것을 좋아합니다.
+  함께 어려운 문제를 직면하고 해결하는 것에 즐거움을 느낍니다.`,
 };

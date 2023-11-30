@@ -5,6 +5,7 @@ import Contacts from './Contacts';
 import Experience from './Experience';
 import Footer from './Footer';
 import Header from './Header';
+import HeaderNav from './HeaderNav';
 import Intro from './Intro';
 import Modal from './Modal';
 import Project from './Project';
@@ -20,6 +21,7 @@ export {
   Experience,
   Footer,
   Header,
+  HeaderNav,
   Intro,
   Modal,
   ClipboardModal,

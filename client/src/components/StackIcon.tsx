@@ -1,4 +1,8 @@
+'use client';
+
 import Image from 'next/image';
+
+import { motion } from 'framer-motion';
 
 import { STACK_ICON } from '@/constants/stack';
 
@@ -21,7 +25,9 @@ interface StackIconProps {
 
 export default function StackIcon({ type }: StackIconProps) {
   return (
-    <div className="flex gap-1 items-center mb-3">
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      className="flex gap-1 items-center mb-3">
       <Image
         src={STACK_ICON[type].image}
         alt="stack icon"
@@ -29,6 +35,6 @@ export default function StackIcon({ type }: StackIconProps) {
         height={24}
       />
       <p className="font-normal text-[15px]">{STACK_ICON[type].title}</p>
-    </div>
+    </motion.div>
   );
 }

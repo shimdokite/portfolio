@@ -15,17 +15,17 @@ interface ContactProps {
 }
 
 export default function Contact({ type, component }: ContactProps) {
-  const { isOpen, portalElement, open, close, setType, setIsOpen} = useModal();
+  const { isOpen, portalElement, open, close, setType, setIsOpen } = useModal();
 
   const tooltip = type === 'phone' || type === 'mail';
 
-  const onClipBoard = (type: string) => {
+  const onClipBoard = () => {
     const phoneNumber = CONTACT_INFO.phone;
 
-    if (type === 'phone') {
-      navigator.clipboard.writeText(phoneNumber || '');
-      return setType('phone');
-    }
+    navigator.clipboard.writeText(phoneNumber || '');
+
+    setType('phone');
+    open();
   };
 
   return (
@@ -37,9 +37,7 @@ export default function Contact({ type, component }: ContactProps) {
             ? 'border-pink-70 bg-pink-70'
             : 'border-blue-70 bg-blue-70'
         } cursor-pointer w-10 h-10 rounded-full flex justify-center items-center`}
-        onClick={() => {
-          onClipBoard(type), open();
-        }}>
+        onClick={type === 'phone' ? onClipBoard : undefined}>
         <Image
           src={CONTACT_ICONS[type]}
           alt={`${type} icon`}
@@ -49,7 +47,10 @@ export default function Contact({ type, component }: ContactProps) {
       </button>
 
       {isOpen && portalElement
-        ? createPortal(<ClipboardModal setIsOpen={setIsOpen} close={close}/>, portalElement)
+        ? createPortal(
+            <ClipboardModal setIsOpen={setIsOpen} close={close} />,
+            portalElement,
+          )
         : null}
 
       <div

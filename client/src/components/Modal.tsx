@@ -36,6 +36,6 @@ export default function Modal({ children, setIsOpen, type }: ModalProps) {
 }
 
 const MODAL_STYLE = {
-  project: 'w-[70%] h-[90%]',
-  clipboard: 'w-[30%] h-[30%]',
+  project: 'w-[70%] h-[90%] max-[660px]:w-[90%]',
+  clipboard: 'w-[35%] h-[25%] max-[640px]:w-[50%] max-[400px]:w-[90%]',
 };
