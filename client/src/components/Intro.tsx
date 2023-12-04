@@ -1,4 +1,5 @@
 import Image from 'next/image';
+
 import Contacts from './Contacts';
 
 import { INTRO_TEXT } from '@/constants/intro';
