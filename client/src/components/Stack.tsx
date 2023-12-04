@@ -2,7 +2,7 @@ import StackIcon from './StackIcon';
 
 export default function Stack() {
   return (
-    <section className="w-full h-[615px] max-[410px]:h-[812px] bg-blue-10">
+    <section className="w-full h-[600px] max-[410px]:h-[812px] bg-blue-10">
       <h1 className="relative top-10 left-36 text-2xl">Stack</h1>
 
       <div className="mt-20 max-[410px]:mt-14 flex justify-center items-center mx-2">
