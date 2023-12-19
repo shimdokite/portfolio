@@ -31,6 +31,7 @@ export default function Header() {
               width={30}
               height={18}
               className="cursor-pointer min-[450px]:hidden mr-5"
+              onClick={() => setIsMenuHover(!isMenuHover)}
             />
 
             {isMenuHover && <HeaderNav isMenuHover={isMenuHover} />}
