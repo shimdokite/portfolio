@@ -42,11 +42,19 @@ export default function ProjectTemplate() {
 
                 <div className="max-[810px]:text-sm">
                   {'('}
-                  <Link href={project.site} className="text-black-10">
+                  <Link
+                    href={project.site}
+                    className="text-black-10"
+                    target="_blank"
+                    rel="noreferrer noopener">
                     &nbsp;📎 배포 사이트&nbsp;|&nbsp;
                   </Link>
 
-                  <Link href={project.github} className="text-black-10">
+                  <Link
+                    href={project.github}
+                    className="text-black-10"
+                    target="_blank"
+                    rel="noreferrer noopener">
                     깃허브&nbsp;
                   </Link>
                   {')'}
