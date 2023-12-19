@@ -8,7 +8,7 @@ export default function Intro() {
   return (
     <div className="w-full h-[690px] flex justify-center items-center max-[450px]:flex  max-[450px]:flex-col max-[450px]:h-[812px]">
       <Image
-        src="/assets/image/profile.jpg"
+        src="/assets/image/profile.png"
         alt="profile image"
         width={300}
         height={300}
@@ -30,7 +30,7 @@ export default function Intro() {
       </section>
 
       <Image
-        src="/assets/image/profile.jpg"
+        src="/assets/image/profile.png"
         alt="profile image"
         width={300}
         height={300}
