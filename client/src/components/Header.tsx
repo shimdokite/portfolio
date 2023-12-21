@@ -23,6 +23,7 @@ export default function Header() {
 
   const onScroll = () => {
     setScrollY(window.scrollY);
+    
     if (height < 625) setSeleceted('contact');
     if (height >= 625) setSeleceted('stack');
     if (height >= 1230) setSeleceted('project');
@@ -39,7 +40,7 @@ export default function Header() {
 
   return (
     <header>
-      <div className="w-full h-[76px] bg-white-10 fixed flex justify-end items-center shadow-down z-50">
+      <div className="w-full h-[70px] bg-white-10 fixed flex justify-end items-center shadow-down z-50">
         <ul>
           <li
             onMouseOver={() => setIsMenuHover(true)}
@@ -61,22 +62,33 @@ export default function Header() {
 
         <ul className="h-[28px] cursor-pointer flex items-center gap-[25px] px-[40px] py-6 text-lg max-[450px]:hidden">
           <li
-            className="hover:border-b-2 border-blue-70"
+            className={`${
+              seleceted === 'contact' && 'border-b-2'
+            } hover:border-b-2 border-blue-70`}
             onClick={() => handleScroll('contact')}>
             Contact
           </li>
+
           <li
-            className="hover:border-b-2 border-blue-70"
+            className={`${
+              seleceted === 'stack' && 'border-b-2'
+            } hover:border-b-2 border-blue-70`}
             onClick={() => handleScroll('stack')}>
             Stack
           </li>
+
           <li
-            className="hover:border-b-2 border-blue-70"
+            className={`${
+              seleceted === 'project' && 'border-b-2'
+            } hover:border-b-2 border-blue-70`}
             onClick={() => handleScroll('project')}>
             Project
           </li>
+
           <li
-            className="hover:border-b-2 border-blue-70"
+            className={`${
+              seleceted === 'experience' && 'border-b-2'
+            } hover:border-b-2 border-blue-70`}
             onClick={() => handleScroll('experience')}>
             Experience
           </li>

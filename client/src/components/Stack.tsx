@@ -2,6 +2,7 @@ import StackIcon from './StackIcon';
 
 export default function Stack() {
   return (
+
     <section className="w-full h-[600px] max-[430px]:h-[812px] bg-blue-10">
       <h1 className="relative top-10 left-36 text-2xl">Stack</h1>
 

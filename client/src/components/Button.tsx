@@ -1,3 +1,7 @@
+'use client';
+
+import { motion } from 'framer-motion';
+
 import { twMerge } from 'tailwind-merge';
 
 interface ButtonProps {
@@ -8,7 +12,8 @@ interface ButtonProps {
 
 export default function Button({ children, onClick, className }: ButtonProps) {
   return (
-    <button
+    <motion.button
+      whileHover={{ scale: 1.05 }}
       onClick={onClick}
       className={twMerge(`rounded-2xl bg-pink-70`, className)}
       type="button"
@@ -17,6 +22,6 @@ export default function Button({ children, onClick, className }: ButtonProps) {
         className={`py-1 px-[10px] text-white-10 text-[14px] text-center font-bold`}>
         {children}
       </p>
-    </button>
+    </motion.button>
   );
 }
