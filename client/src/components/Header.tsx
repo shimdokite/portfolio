@@ -18,17 +18,18 @@ export default function Header() {
     const top = getScrollForward(type);
 
     scroll({ top, behavior: 'smooth' });
-    setSeleceted(type);
   };
 
   const onScroll = () => {
     setScrollY(window.scrollY);
-    
-    if (height < 625) setSeleceted('contact');
-    if (height >= 625) setSeleceted('stack');
-    if (height >= 1230) setSeleceted('project');
-    if (height >= 1850) setSeleceted('experience');
+
+    if (height < 616) setSeleceted('contact');
+    if (height >= 616) setSeleceted('stack');
+    if (height >= 1219) setSeleceted('project');
+    if (height >= 1834) setSeleceted('experience');
   };
+
+  console.log(height);
 
   useEffect(() => {
     window.addEventListener('scroll', onScroll);
@@ -36,7 +37,7 @@ export default function Header() {
     return () => {
       window.removeEventListener('scroll', onScroll);
     };
-  }, []);
+  }, [height]);
 
   return (
     <header>
