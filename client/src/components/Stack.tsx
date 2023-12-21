@@ -2,11 +2,11 @@ import StackIcon from './StackIcon';
 
 export default function Stack() {
   return (
-    <section className="w-full h-[615px] max-[410px]:h-[812px] bg-blue-10">
+    <section className="w-full h-[600px] max-[430px]:h-[812px] bg-blue-10">
       <h1 className="relative top-10 left-36 text-2xl">Stack</h1>
 
       <div className="mt-20 max-[410px]:mt-14 flex justify-center items-center mx-2">
-        <div className="bg-white-10 rounded-sm px-8 py-3 flex justify-center gap-44 max-[670px]:gap-24 max-[510px]:gap-12 max-[410px]:block">
+        <div className="bg-white-10 rounded-sm px-8 py-3 flex justify-center gap-44 max-[670px]:gap-24 max-[510px]:gap-12 max-[430px]:block">
           <div className="max-[670px]:mb-10">
             <h2 className="mb-2 text-lg">[Language]</h2>
             <StackIcon type="javascript" />
