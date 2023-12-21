@@ -56,7 +56,7 @@ export default function Contact({ type, component }: ContactProps) {
       <div
         className={`${
           tooltip &&
-          'hidden rounded-md bg-black-10 group-hover:flex justify-center items-center z-[20] absolute top-[-90%] left-[50%] translate-x-[-50%]'
+          'hidden rounded-md bg-black-10 group-hover:flex justify-center items-center z-[20] absolute top-[-90%] left-[50%] translate-x-[-50%] max-[630px]:translate-x-[-30%] mx-2'
         }`}>
         <p
           className="px-[7px] py-1 flex justify-center items-center w-full whitespace-nowrap text-sm text-center font-normal"

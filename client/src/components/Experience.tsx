@@ -2,7 +2,7 @@ import { EXPERIENCES } from '@/constants/experience';
 
 export default function Experience() {
   return (
-    <div className="h-[615px] bg-pink-10 max-[810px]:h-[650px]">
+    <div className="h-[600px] bg-pink-10 max-[810px]:h-[630px]">
       <h1 className="relative top-10 left-36 text-2xl max-[410px]:left-[115px]">
         Experience
       </h1>
@@ -14,7 +14,7 @@ export default function Experience() {
             key={experience.title}>
             <section className="flex flex-col justify-center items-center mr-7">
               <div className="flex flex-col justify-center items-center">
-                <h2>{experience.title}</h2>
+                <h2 className="whitespace-nowrap">{experience.title}</h2>
 
                 <div className="font-thin text-sm">
                   <p>{experience.start} -</p>
