@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { HeaderNav } from '.';
 
@@ -9,12 +9,33 @@ import getScrollForward from '../../utils/getScrollForward';
 
 export default function Header() {
   const [isMenuHover, setIsMenuHover] = useState(false);
+  const [seleceted, setSeleceted] = useState('');
+  const [scrollY, setScrollY] = useState(0);
+
+  const height = typeof window !== 'undefined' ? window.scrollY : 0;
 
   const handleScroll = (type: string) => {
     const top = getScrollForward(type);
 
     scroll({ top, behavior: 'smooth' });
+    setSeleceted(type);
   };
+
+  const onScroll = () => {
+    setScrollY(window.scrollY);
+    if (height < 625) setSeleceted('contact');
+    if (height >= 625) setSeleceted('stack');
+    if (height >= 1230) setSeleceted('project');
+    if (height >= 1850) setSeleceted('experience');
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', onScroll);
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
+  }, []);
 
   return (
     <header>
@@ -31,7 +52,9 @@ export default function Header() {
               className="cursor-pointer min-[450px]:hidden mr-5"
             />
 
-            {isMenuHover && <HeaderNav isMenuHover={isMenuHover} />}
+            {isMenuHover && (
+              <HeaderNav isMenuHover={isMenuHover} height={scrollY} />
+            )}
           </li>
         </ul>
 

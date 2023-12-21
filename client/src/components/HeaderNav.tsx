@@ -1,18 +1,31 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
 import getScrollForwardMobile from '../../utils/getScrollForwardMobile';
 
 interface HeaderNavProps {
   isMenuHover?: boolean;
   isProfileHover?: boolean;
+  height: number;
 }
 
-export default function HeaderNav({ isMenuHover }: HeaderNavProps) {
+export default function HeaderNav({ isMenuHover, height }: HeaderNavProps) {
+  const [seleceted, setSeleceted] = useState('');
+
   const handleScroll = (type: string) => {
     const top = getScrollForwardMobile(type);
 
     scroll({ top, behavior: 'smooth' });
+    setSeleceted(type);
   };
+
+  useEffect(() => {
+    if (height < 740) setSeleceted('contact');
+    if (height >= 740) setSeleceted('stack');
+    if (height >= 1550) setSeleceted('project');
+    if (height >= 2365) setSeleceted('experience');
+  }, [height]);
 
   return (
     <div className="absolute">
