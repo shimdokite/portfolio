@@ -10,9 +10,9 @@ export default function Experience() {
       <div className="w-full h-[85%] flex flex-col justify-center items-center mx-2 max-[810px]:mt-0">
         {EXPERIENCES.map((experience) => (
           <div
-            className="w-[500px] mt-14 flex justify-center items-center gap-14 max-[810px]:gap-9 max-[810px]:flex-col max-[810px]:mt-16"
+            className="mt-14 flex justify-center items-center gap-14 max-[810px]:gap-9 max-[810px]:flex-col max-[810px]:mt-16"
             key={experience.title}>
-            <section className="flex flex-col justify-center items-center mr-7">
+            <section className="w-[250px] flex flex-col justify-center items-center mr-7">
               <div className="flex flex-col justify-center items-center">
                 <h2 className="whitespace-nowrap">{experience.title}</h2>
 
@@ -23,7 +23,7 @@ export default function Experience() {
               </div>
             </section>
 
-            <section className="flex flex-col justify-center items-center">
+            <section className="w-[300px] flex flex-col justify-center items-start">
               <div className="max-[810px]:flex flex-col">
                 <div className="flex justify-start">
                   <h2 className="max-[810px]:flex justify-center items-center">
