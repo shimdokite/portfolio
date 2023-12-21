@@ -1,4 +1,4 @@
-const getScrollForwardMobile = (type: string) => {
+export const getScrollForwardMobile = (type: string) => {
   if (type === 'contact') return 0;
   if (type === 'stack') return 740;
   if (type === 'project') return 1550;
