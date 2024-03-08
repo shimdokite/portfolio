@@ -110,7 +110,7 @@ export const READ_MORE = {
     solution: [
       {
         title: '문제 발견',
-        image: '/assets/image/pre_project_error_1.png',
+        image: '/assets/image/pre_project_error_1.webp',
         content: [
           '텍스트를 입력할 때마다 Redux dev tool에서 액션 로그가 계속 출력되는 걸 발견했습니다.',
           '이는 로깅에 대한 불편함을 야기하고, 해당 상태를 의존하고 있는 컴포넌트에서도 불필요한 리렌더링이 발생할 수 있습니다.',

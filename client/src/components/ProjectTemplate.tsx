@@ -97,7 +97,7 @@ export default function ProjectTemplate() {
               )
             : null}
 
-          <div className="flex items-center justify-center mt-10 border-black-10 border-[0.5px] w-full max-[810px]:hidden"></div>
+          <hr className="flex items-center justify-center mt-10 border-black-10 w-full max-[810px]:hidden"></hr>
         </div>
       ))}
     </div>

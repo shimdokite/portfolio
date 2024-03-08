@@ -66,7 +66,7 @@ export default function ReadMoreModal({
                       src={solve.image}
                       alt="문제 원인 사진"
                       width={700}
-                      height={200}
+                      height={350}
                       className="mb-3 rounded-md border-pink-70 border-2"
                     />
                   </div>
