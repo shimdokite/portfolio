@@ -17,10 +17,10 @@ interface StackIconProps {
     | 'query'
     | 'tailwind'
     | 'styled'
-    | 'sass'
+    | 'scss'
     | 'github'
-    | 'aws'
-    | 'vercel';
+    | 'vercel'
+    | 'aws';
 }
 
 export default function StackIcon({ type }: StackIconProps) {

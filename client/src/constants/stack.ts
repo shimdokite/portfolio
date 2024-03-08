@@ -35,20 +35,20 @@ export const STACK_ICON = {
     title: 'Styled-Components',
     image: '/assets/icon/styledComponents.svg',
   },
-  sass: {
-    title: 'Sass',
-    image: '/assets/icon/sass.svg',
+  scss: {
+    title: 'SCSS',
+    image: '/assets/icon/scss.svg',
   },
   github: {
     title: 'Github',
     image: '/assets/icon/github_black.svg',
   },
-  aws: {
-    title: 'AWS(S3)',
-    image: '/assets/icon/s3.svg',
-  },
   vercel: {
     title: 'Vercel',
     image: '/assets/icon/vercel.svg',
+  },
+  aws: {
+    title: 'AWS(S3)',
+    image: '/assets/icon/s3.svg',
   },
 } as const;
