@@ -29,8 +29,6 @@ export default function Header() {
     if (height >= 1834) setSeleceted('experience');
   };
 
-  console.log(height);
-
   useEffect(() => {
     window.addEventListener('scroll', onScroll);
 
