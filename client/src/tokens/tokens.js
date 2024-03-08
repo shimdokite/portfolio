@@ -13,6 +13,7 @@ const tokens = {
     },
     black: {
       10: '#A9A9A9',
+      20: '#797B7B',
       90: '#000000'
     },
     white: {
