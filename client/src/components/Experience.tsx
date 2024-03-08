@@ -2,9 +2,9 @@ import { EXPERIENCES } from '@/constants/experience';
 
 export default function Experience() {
   return (
-    <div className="h-full bg-pink-10 max-[810px]:py-8">
+    <div className="h-full bg-pink-10">
       <div className="pb-10">
-        <h1 className="relative top-10 left-36 text-2xl max-[410px]:left-[115px]">
+        <h1 className="relative top-10 left-36 text-2xl max-[410px]:left-[115px] max-[810px]:pb-6">
           Experience
         </h1>
       </div>
