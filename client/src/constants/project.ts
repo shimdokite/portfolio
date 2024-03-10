@@ -1,7 +1,7 @@
 export const PROJECTS = [
   {
     title: 'Grow Story',
-    thumbnail: '/assets/image/growstory.png',
+    thumbnail: '/assets/image/main_project_intro.gif',
     year: '2023',
     stack: 'TypeScript, Next.js, React-query, Zustand, Tailwind CSS',
     summary:
@@ -12,7 +12,7 @@ export const PROJECTS = [
 
   {
     title: 'Stack Overflow',
-    thumbnail: '/assets/image/stackoverlfow.png',
+    thumbnail: '/assets/image/pre_project_intro.gif',
     year: '2023',
     stack: 'JavaScript, React, React-quill, Redux-toolkit, Styled-Components',
     summary:
@@ -28,56 +28,42 @@ export const READ_MORE = {
       {
         title: '회원가입 & 로그인',
         content: [
-          '자체 이메일 회원가입, 로그인을 구현했습니다.',
-          'OAuth 2를 사용해 구글 로그인을 구현했습니다.',
+          '자체 이메일 회원가입과 로그인, 구글 소셜 로그인을 구현했습니다.',
+          'React-hook-form을 사용하여 유효성 검사와 더불어 복잡한 입력 폼을 단순하게 관리했습니다.',
         ],
       },
       {
-        title: '소셜 회원과 이메일 회원 분리',
-        content: [
-          '로그인 할때 isGoogleLogin, isEmailLogin 값을 사용하여 사용자 유형을 나누어 정보 수정 페이지를 조건부 스타일로 구현했습니다.',
-        ],
-      },
-      {
-        title: '사용자의 내 게시글',
+        title: '유저의 내 게시글 조회',
         content: [
           'React-query와 React-infinite-scroller를 사용하여 페이지 단위로 쿼리를 보내 받아온 데이터를 무한 스크롤로 볼 수 있게 구현했습니다.',
           '데이터를 받아오는 동안 Loading Message를 보여주고, 에러가 난 경우 Error Message를 보이게 했습니다.',
         ],
       },
       {
-        title: '서버 통신 로직 분리',
+        title: '게스트 모드와 관리자 페이지',
         content: [
-          '서버 통신 로직을 React-query를 사용하여 Custom Hook으로 만들어 페이지 컴포넌트에서 UI와 서버 통신을 분리했습니다.',
+          '게스트 모드를 추가하여 서비스의 진입 장벽을 낮췄습니다.',
+          '불량 유저를 관리하고 서비스 문의 목록을 관리하기 위해 관리자 페이지를 구현했습니다.',
         ],
       },
       {
-        title: '반응형 웹',
+        title: '유저의 서비스 문의 채팅',
         content: [
-          '데스크톱 뿐만 아니라 모바일 화면에도 대응할 수 있도록 반응형 웹으로 개발하였습니다.',
+          'Stomp와 SockJS를 사용하여 유저와 관리자의 양방향 통신의 실시간 채팅을 구현했습니다.',
+          '유저는 관리자와 1:1 채팅을 할 수 있고, 관리자는 불특정 다수의 유저와 1:N 채팅을 할 수 있습니다.',
         ],
       },
     ],
     solution: [
       {
-        title: '문제 발견',
-        content: [
-          '로그인 후 새로고침을 할 때마다 하이드레이션(hydration) 에러가 뜨는 것을 확인했습니다.',
-        ],
+        title: '이제야 용기내서 써보는 React Hook Form과 DRY vs WET',
+        url: 'https://dokite-99.tistory.com/123',
+        image: '/assets/image/react_blog.jpg',
+      },
+      {
+        title: 'React와 Next.js, 그리고 Hydration',
+        url: 'https://dokite-99.tistory.com/124',
         image: '/assets/image/main_project_error_1.png',
-      },
-      {
-        title: '문제 원인',
-        content: [
-          '원인은 서버 측 렌더링과 클라이언트 측 렌더링의 불일치로 인한 렌더링 이슈였습니다.',
-        ],
-      },
-      {
-        title: '문제 해결',
-        content: [
-          '서버 사이드 렌더링(SSR)과 클라이언트 사이드 렌더링(CSR)의 차이점을 알아보고, React Hooks와 함수형 컴포넌트가 존재하기 이전에 componentDidMount()에서 this.state.isClient를 true로 설정하여 해결한 방법을 참고했습니다.',
-          'useClient라는 Custom Hook을 만들어 컴포넌트가 처음 렌더링 된 후 useEffect가 실행되면서 state의 값을 변경하고 다시 렌더링을 수행하여 서버와 동일한 콘텐츠를 렌더링 할 수 있도록 구현하여 문제를 해결했습니다.',
-        ],
       },
     ],
   },
@@ -109,27 +95,24 @@ export const READ_MORE = {
     ],
     solution: [
       {
-        title: '문제 발견',
+        title: 'Redux와 애증의 상관관계',
+        url: 'https://dokite-99.tistory.com/125',
         image: '/assets/image/pre_project_error_1.webp',
-        content: [
-          '텍스트를 입력할 때마다 Redux dev tool에서 액션 로그가 계속 출력되는 걸 발견했습니다.',
-          '이는 로깅에 대한 불편함을 야기하고, 해당 상태를 의존하고 있는 컴포넌트에서도 불필요한 리렌더링이 발생할 수 있습니다.',
-        ],
       },
-      {
-        title: '문제 원인',
-        content: [
-          'onChange를 통해 Redux에 저장된 상태를 직접 변경한 것이 문제였습니다.',
-        ],
-      },
-      {
-        title: '문제 해결',
-        content: [
-          '기존 코드에서 부모 컴포넌트에서 submit이 실행되기 때문에 useState를 만들어 초깃값으로 수정할 질문 내용을 저장하고, 이슈가 발생했던 해당 컴포넌트에 props로 내려줍니다.',
-          '이렇게 하면 자식 컴포넌트에서 사용했던 useEffect를 사용하지 않아도 되고, 컴포넌트 구조를 체계화할 수 있으며 Redux에서 상태가 업데이트되던 이슈를 해결할 수 있습니다.',
-          '더불어 현재 서비스는 텍스트만을 서버와 주고받지만, 더 큰 용량의 데이터를 주고받게 된다면 컴포넌트 구조를 변경한 방법도 고려해볼 수 있습니다.',
-        ],
-      },
+    ],
+  },
+};
+
+export const SERVICES = {
+  main: {
+    introduce: [
+      'Grow Story는 자신이 키우는 식물을 등록하고 일지를 작성하여 나만의 식물 카드를 만들어 관리할 수 있습니다.',
+      '원하는 아이템을 구입하여 자신만의 정원을 꾸며 다양한 유저들에게 소개하고, 소통할 수 있는 커뮤니티 사이트입니다.',
+    ],
+  },
+  pre: {
+    introduce: [
+      'Stack Overflow는 여러 개발자들과 의견을 나누는 개발자를 위한 질의응답 커뮤니티 사이트입니다.',
     ],
   },
 };
