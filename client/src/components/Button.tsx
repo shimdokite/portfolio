@@ -13,7 +13,7 @@ interface ButtonProps {
 export default function Button({ children, onClick, className }: ButtonProps) {
   return (
     <motion.button
-      whileHover={{ scale: 1.05 }}
+      whileHover={{ scale: 1.2 }}
       onClick={onClick}
       className={twMerge(`rounded-2xl bg-pink-70`, className)}
       type="button"
