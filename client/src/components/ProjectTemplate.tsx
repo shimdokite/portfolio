@@ -31,7 +31,8 @@ export default function ProjectTemplate() {
               src={project.thumbnail}
               alt="project thumbnail"
               width={200}
-              height={180}
+              height={130}
+              className="w-[200px] h-[130px] rounded-md"
             />
 
             <section className="w-full flex flex-col justify-center">
