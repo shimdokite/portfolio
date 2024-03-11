@@ -95,7 +95,7 @@ export const READ_MORE = {
     ],
     solution: [
       {
-        title: 'Redux와 애증의 상관관계',
+        title: '상태 관리, 어떻게 하세요?라는 질문이 들어온다면...',
         url: 'https://dokite-99.tistory.com/125',
         image: '/assets/image/pre_project_error_1.webp',
       },
