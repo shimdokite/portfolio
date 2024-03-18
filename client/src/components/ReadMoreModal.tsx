@@ -20,7 +20,7 @@ export default function ReadMoreModal({
     <Modal setIsOpen={setIsOpen} type="project">
       <div className="w-full h-full flex flex-col px-7 py-4 overflow-y-scroll">
         <section className="mb-4">
-          <div className="flex justify-between">
+          <div className="flex justify-between pt-2">
             <h1 className="text-lg mb-3 text-blue-70 font-bold">
               💎 서비스 소개
             </h1>
@@ -68,32 +68,34 @@ export default function ReadMoreModal({
             🚨 문제 해결 경험
           </h1>
 
-          {READ_MORE[type].solution.map((solve, index) => (
-            <ul key={index}>
-              <li className="mb-2" key={solve.title}>
-                <Link
-                  href={solve.url}
-                  target="_blank"
-                  rel="noreferrer noopener">
-                  <h2 className="w-fit font-bold mb-2 cursor-pointer hover:bg-yellow-10 transition-all">
-                    {solve.title}
-                  </h2>
-                </Link>
+          <div className="flex justify-start items-center gap-2 max-lg:flex-col max-lg:items-start max-lg:justify-center">
+            {READ_MORE[type].solution.map((solve, index) => (
+              <ul key={index}>
+                <li className="w-full mb-2" key={solve.title}>
+                  <Link
+                    href={solve.url}
+                    target="_blank"
+                    rel="noreferrer noopener">
+                    <h2 className="font-bold mb-2 cursor-pointer hover:bg-yellow-10 transition-all max-lg:text-sm max-lg:truncate max-lg:w-[250px]">
+                      {solve.title}
+                    </h2>
+                  </Link>
 
-                {solve.image !== undefined && (
-                  <div className="flex justify-start items-center">
-                    <Image
-                      src={solve.image}
-                      alt="문제 원인 사진"
-                      width={500}
-                      height={250}
-                      className="h-[250px] mb-3 rounded-md"
-                    />
-                  </div>
-                )}
-              </li>
-            </ul>
-          ))}
+                  {solve.image !== undefined && (
+                    <div className="flex justify-start items-center">
+                      <Image
+                        src={solve.image}
+                        alt="문제 원인 사진"
+                        width={400}
+                        height={200}
+                        className="h-[200px] mb-3 rounded-md"
+                      />
+                    </div>
+                  )}
+                </li>
+              </ul>
+            ))}
+          </div>
         </section>
       </div>
     </Modal>
