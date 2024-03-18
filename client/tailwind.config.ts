@@ -18,6 +18,11 @@ const config: Config = {
       letterSpacing,
     },
     plugins: [],
+    screens: {
+      sm: '450px',
+      md: '810px',
+      lg: '1030px',
+    },
   },
 };
 export default config;
