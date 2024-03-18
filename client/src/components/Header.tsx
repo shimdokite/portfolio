@@ -23,10 +23,15 @@ export default function Header() {
   const onScroll = () => {
     setScrollY(window.scrollY);
 
+    console.log(window.scrollY);
+
     if (height < 616) setSeleceted('contact');
     if (height >= 616) setSeleceted('stack');
     if (height >= 1219) setSeleceted('project');
     if (height >= 1834) setSeleceted('experience');
+
+    if (window.innerHeight === 934 && height >= 1650)
+      setSeleceted('experience');
   };
 
   useEffect(() => {
