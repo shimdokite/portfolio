@@ -76,20 +76,25 @@ export default function ReadMoreModal({
                     href={solve.url}
                     target="_blank"
                     rel="noreferrer noopener">
-                    <h2 className="font-bold mb-2 cursor-pointer hover:bg-yellow-10 transition-all max-lg:text-sm max-lg:truncate max-lg:w-[250px]">
+                    <h2 className="w-fit font-bold mb-2 cursor-pointer hover:bg-yellow-10 max-lg:text-sm max-lg:truncate max-sm:w-64">
                       {solve.title}
                     </h2>
                   </Link>
 
                   {solve.image !== undefined && (
                     <div className="flex justify-start items-center">
-                      <Image
-                        src={solve.image}
-                        alt="문제 원인 사진"
-                        width={400}
-                        height={200}
-                        className="h-[200px] mb-3 rounded-md"
-                      />
+                      <Link
+                        href={solve.url}
+                        target="_blank"
+                        rel="noreferrer noopener">
+                        <Image
+                          src={solve.image}
+                          alt="문제 원인 사진"
+                          width={400}
+                          height={200}
+                          className="cursor-pointer h-[200px] mb-3 rounded-md"
+                        />
+                      </Link>
                     </div>
                   )}
                 </li>
