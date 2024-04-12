@@ -2,19 +2,21 @@ import StackIcon from './StackIcon';
 
 export default function Stack() {
   return (
-    <section className="w-full h-[600px] max-[430px]:h-[812px] bg-blue-10">
-      <h1 className="relative top-10 left-36 text-2xl">Stack</h1>
+    <section className="w-full h-[600px] py-7 max-[430px]:h-[812px] bg-blue-10">
+      <div className="pt-9 flex flex-col justify-center items-center gap-2 mx-2">
+        <div className="w-[783px] pb-3 flex items-center max-[810px]:justify-center">
+          <h1 className="text-2xl">S t a c k</h1>
+        </div>
 
-      <div className="mt-20 max-[410px]:mt-14 flex justify-center items-center mx-2">
-        <div className="bg-white-10 rounded-sm px-9 py-3 flex justify-center gap-36 max-[670px]:gap-24 max-[510px]:gap-12 max-[430px]:block">
+        <div className="bg-white-10 rounded-xl shadow-md px-9 py-3 flex justify-center gap-36 max-[670px]:gap-24 max-[510px]:gap-12 max-[430px]:block">
           <div className="max-[670px]:mb-10">
-            <h2 className="mb-2 text-lg">[Language]</h2>
+            <h2 className="mb-2 text-lg font-mono">[Language]</h2>
             <StackIcon type="javascript" />
             <StackIcon type="typescript" />
           </div>
 
           <div className="max-[670px]:mb-10">
-            <h2 className="mb-2 text-lg">[Library & Framework]</h2>
+            <h2 className="mb-2 text-lg font-mono">[Library & Framework]</h2>
             <StackIcon type="react" />
             <StackIcon type="next" />
             <StackIcon type="zustand" />
@@ -26,7 +28,7 @@ export default function Stack() {
           </div>
 
           <div>
-            <h2 className="mb-2 text-lg">[Other]</h2>
+            <h2 className="mb-2 text-lg font-mono">[Other]</h2>
             <StackIcon type="github" />
             <StackIcon type="vercel" />
             <StackIcon type="aws" />
