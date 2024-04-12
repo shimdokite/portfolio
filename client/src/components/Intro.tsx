@@ -6,17 +6,17 @@ import { INTRO_TEXT } from '@/constants/intro';
 
 export default function Intro() {
   return (
-    <div className="w-full h-[690px] flex justify-center items-center max-[450px]:flex  max-[450px]:flex-col max-[450px]:h-[812px]">
+    <div className="w-full h-[690px] flex justify-center items-center max-[480px]:flex max-[480px]:flex-col max-[450px]:h-[812px]">
       <Image
         src="/assets/image/profile.png"
         alt="profile image"
-        width={300}
-        height={300}
-        className="rounded-full max-w-[250px] max-h-[250px] min-w-[150px] min-h-[150px] drop-shadow-imageShadow mx-2 min-[450px]:hidden"
+        width={250}
+        height={250}
+        className="rounded-full min-w-[150px] min-h-[150px] drop-shadow-imageShadow mx-2 min-[480px]:hidden"
       />
 
-      <section className="mt-14 w-[45%] flex flex-col items-start gap-4 mx-2 max-[450px]:w-[90%]">
-        <h1 className="text-[44px] max-[700px]:text-[34px] max-[550px]:text-[24px] max-[450px]:text-[22px] leading-tight font-bold whitespace-pre-line">
+      <section className="mt-14 w-[45%] flex flex-col items-start gap-4 mx-2 max-[480px]:w-[90%]">
+        <h1 className="text-[44px] max-[700px]:text-[34px] max-[550px]:text-[24px] max-[480px]:text-[22px] leading-tight font-bold whitespace-pre-line">
           {INTRO_TEXT.title}
         </h1>
 
@@ -32,9 +32,9 @@ export default function Intro() {
       <Image
         src="/assets/image/profile.png"
         alt="profile image"
-        width={300}
-        height={300}
-        className="rounded-full max-w-[250px] max-h-[250px] min-w-[150px] min-h-[150px] drop-shadow-imageShadow mx-2 max-[450px]:hidden"
+        width={250}
+        height={250}
+        className="rounded-full drop-shadow-imageShadow mx-2 max-[480px]:hidden"
       />
     </div>
   );
